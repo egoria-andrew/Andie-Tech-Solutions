@@ -6,49 +6,62 @@
     --white: #ffff;
     --whatsapp-green: #25d366;
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'SegoeUI',Roboto,Helvetica,Arial, sans-serif;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 img{
     max-width: 100%;
     height: auto;
     display: block;
 }
 container{
-    max-width: 1200px;
+    max-width: min;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 5%;
+    width: 90%;
 }
 section{
-    padding: 80px 0;
+    padding: 20px;
+    justify-content: center;
 }
 header{
     background: var(--white);
-    padding: 15px 0;
+    padding: 1px 0;
     box-shadow: 0 20px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 10000;
 }
 .hero{
-    background: linear-gradient(to right, #f8faff, #ffffff);
+    /*background-color: #f8faff;*/
+    background-image: url("/assets/student.png");
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    /*background: linear-gradient(to right, #f8faff, #ffffff);*/
     padding: 120px 0;
     border-bottom: 1px solid #dee2e6;
+    
 }
 .hero-flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 40px;
 }
 .hero-text{
     flex: 1;
+    align-items: center;
+    padding: 20px;
 }
 .badge{
     background: rgba(0,123,255,0.1);
@@ -67,12 +80,14 @@ header{
     color: #1a1a1a;
     letter-spacing: -1px;
     margin-bottom: 20px;
+    
 }
 .hero-text p{
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 30px;
     line-height: 1.6;
+    align-items: right;
 }
 .hero-btns{
     display: flex;
@@ -99,7 +114,13 @@ header{
     box-shadow: 0 5px 15px rgba(0,123,255,0.2);
 }
 .hero-img{
-    flex: 1; 
+    flex: 1;
+    text-align: center; 
+}
+.hero-img img{
+    max-width: 500px;
+    width: 100%;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
 }
 .img-placeholder{
     background: white;
@@ -111,11 +132,13 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 .branding{
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-left: 10px;
 }
 .logo-circle{
     width: 45px;
@@ -143,6 +166,15 @@ header{
     list-style: none;
     gap: 15px;
 }
+/*.nav-menu{
+    position: relative;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 60px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border: 0.5px solid #ccc;
+}*/
 .nav-btn{
     text-decoration: none;
     color:var(--dark-grey);
@@ -155,11 +187,32 @@ header{
     background: var(--primary-blue);
     color: white;
 }
+.services-header-intro{
+    text-align: left;
+    max-width: aut;
+    margin: 0 auto 50px auto;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.services-header-intro h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-grey);
+}
+.services-header-intro p{
+    font-size: 1.1rem;
+    max-width: auto;
+    margin: 10px auto;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 .services-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 40px; 
+    margin-top: 40px;
+    padding: 20px; 
 }
 .service-card{
     background: white;
@@ -229,13 +282,19 @@ header{
     text-decoration: none;
 }
 .contact-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    background: #fdfdfd;
-    padding: 60px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px;
+    width: min(800px 90%);
+    
+}
+.contact-info,.contact-cta{
+    flex: 1;
+    min-width: auto;
 }
 .contact-info h2{
     font-size: 2.2rem;
@@ -245,12 +304,13 @@ header{
 .contact-details{
     list-style: none;
     margin-top: flex;
+    padding: 0;
 }
 .contact-details li{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     font-size: 1.1rem;
     color: #555;
 }
@@ -265,7 +325,7 @@ header{
     border-radius: 15px;
     border: 1px solid #eee;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 
 }
 .cta-box h3{
