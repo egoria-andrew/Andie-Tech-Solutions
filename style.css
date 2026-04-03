@@ -43,7 +43,7 @@ header{
 }
 .hero{
     /*background-color: #f8faff;*/
-    background-image: url("/assets/student.png");
+    background-image: url("student.png");
     display: flex;
     align-items: center;
     min-height: 80vh;
