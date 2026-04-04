@@ -34,7 +34,9 @@ container{
     width:90%;
 }
 section{
-    padding: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box;
     justify-content: center;
 }
 header{
@@ -46,7 +48,7 @@ header{
     z-index: 10000;
 }
 .hero{
-    background-image: url("student.png");
+    background-image: url("/assets/student.png");
     background-attachment: scroll;
     background-size: auto;
     background-position: auto;
@@ -280,6 +282,10 @@ header{
     color: #495057;
     line-height: 1.6;
 }
+.main-footer{
+        max-width: 100%;
+        margin: 0 auto;
+    }
 .tip-footer{
     margin-top: 25px;
     display: flex;
@@ -459,7 +465,7 @@ header{
     /*swap the image*/
     .hero{
         /* 1. Set the new abstract background */
-        background-image: url('mobile.png') !important;
+        background-image: url('assets/mobile.png') !important;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -482,8 +488,8 @@ header{
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(5px); 
         padding: 20px;
-        border-radius: 15px;*/
-    }
+        border-radius: 15px;
+    }*/
 
     .hero-tex h2{
         font-size: 32px;
@@ -496,3 +502,50 @@ header{
         color: #444;
         margin-bottom: 25px;
     }
+    html, body {
+        overflow-x: hidden; /* This prevents the site from shaking or sliding sideways */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. HEADER PADDING */
+    header {
+        padding:5px 10px !important; 
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 3. CONTACT SECTION  */
+    .contact-section, .contact-info {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%; 
+        padding: 0 15px;
+    }
+
+    .contact-item a {
+        font-size: 16px; /* Slightly smaller font if the number is very long */
+        display: block; 
+        white-space: normal; /* Allows the number to wrap if it needs to */
+    }
+
+    /* 4. FOOTER PADDING */
+    footer {
+        padding: 40px 20px !important; 
+        text-align: center;
+    }
+
+    footer .footer-content, footer .footer-bottom {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* 5. GENERAL SECTION FIX (Applies to all sections to ensure no "wall" touching) */
+    section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box; /* Crucial: makes sure padding doesn't add to the width */
+    }
+}
