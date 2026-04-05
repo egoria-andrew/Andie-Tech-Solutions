@@ -39,8 +39,7 @@ section{
     justify-content: center;
 }
 header{
-    /*background: var(--white);*/
-    background-image: url("mobile.png");
+    background-image: url(mobile.png);
     padding: 1px 0;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     position: sticky;
@@ -212,6 +211,7 @@ header{
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--dark-grey);
+    margin-top: 10px;
 }
 .services-header-intro p{
     font-size: 1.1rem;
@@ -236,6 +236,17 @@ header{
     transition: transform 0.3s;
     text-align: center;
     padding-bottom: 20px;
+    
+}
+.service-price {
+    display: flex;
+    justify-content: center;
+    color: #111113;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 .service-card:hover{
     transform: translateY(-20px);
@@ -245,10 +256,35 @@ header{
     height: auto;
     object-fit: cover;
 }
+.service-info{
+    padding: 10px;
+    text-align: left;
+}
+.Price{
+    /*border: 1px solid rgb(1, 1, 43);*/
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(135deg, #f5f6f7 0%, #e8e9ea 100%);
+    color: #0b0c0c;
+
+}
 .service-info i{
+    display: inline;
     font-size: 2rem;
-    color: var(--primary-blue);
-    margin: 15px 0;
+    color: var(--dark-grey);
+    margin: 15px 15px;
+    align-items: center;
+}
+.service-info a{
+    text-decoration: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #037bfc 0%, #143e6b 100%);
+    color: white;
+    padding: 10px;
+    
+}.service-info a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.5);
 }
 .tip-section{
     padding: 80px 0;
@@ -257,7 +293,7 @@ header{
 .tip-box{
     background: #fff9db;
     border-left: 5px solid #fcc419;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 
@@ -294,6 +330,10 @@ header{
     align-items: center;
     font-weight: 600;
     color: adb5bd;
+}
+.tip-footer a{
+    text-decoration: none;
+    color: var(--primary-blue);
 }
 .link-btn{
     color: var(--primary-blue);
