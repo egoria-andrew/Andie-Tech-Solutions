@@ -39,7 +39,8 @@ section{
     justify-content: center;
 }
 header{
-    background: var(--white);
+    /*background: var(--white);*/
+    background-image: url("mobile.png");
     padding: 1px 0;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     position: sticky;
