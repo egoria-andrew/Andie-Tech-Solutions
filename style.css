@@ -12,7 +12,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'SegoeUI',Roboto,Helvetica,Arial, sans-serif;
-    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -20,7 +19,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 
 img{
@@ -48,7 +47,7 @@ header{
     z-index: 10000;
 }
 .hero{
-    background-image: url("student.png");
+    background-image: url("/assets/student.png");
     background-attachment: scroll;
     background-size: auto;
     background-position: auto;
@@ -202,10 +201,11 @@ header{
 }
 .services-header-intro{
     text-align: left;
-    max-width: aut;
+    max-width: auto;
     margin: 0 auto 50px auto;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 1px;
+    margin-top: 40px;
 }
 .services-header-intro h2{
     font-size: 2.5rem;
@@ -225,7 +225,7 @@ header{
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 30px;
     margin-top: 40px;
-    padding: 20px; 
+    padding: 1px; 
 }
 .service-card{
     background: white;
@@ -353,7 +353,7 @@ header{
 .main-footer{
     background-color: rgba(0,0,0,0.8);
     color: white;
-    padding: 60px 0 20px;
+    padding: 40px 10px 10px;
     margin-top: 80px;
 }
 .footer-grid{
@@ -402,14 +402,14 @@ header{
         width: 100%;
         position: absolute;
         top: 70px; /* Adjust based on your header height */
-        left: -100%; /* Hide it off-screen to the left */
+        left: -100%; /*Hide it off-screen to the left */
         transition: all 0.5s ease;
         background: #ffffff;
         padding: 20px 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    /* When we add the 'active' class via JS, it slides in */
+    /* add the 'active' class via JS, it slides in */
     .nav-links.active {
         left: 0;
     }
@@ -432,6 +432,7 @@ header{
         margin: 5px auto;
         background: #333;
         transition: all 0.3s ease-in-out;
+        margin: 5px;
     }
 
     /* Animation: Turn hamburger into an 'X' when active */
@@ -441,7 +442,7 @@ header{
 }
 
 /* Hide hamburger on Desktop */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     .menu-toggle {
         display: block;
         cursor: pointer;
@@ -469,83 +470,14 @@ header{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        
-        /* 2. Layout: Center everything for mobile */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    }
+    .hero-flex{
+        display: inline;
         align-items: center;
-        text-align: center;
-        
-        min-height: 80vh;
-        padding: 40px 20px;
-        margin: 0;
-    }
-
-   /* .hero-flex {
-        /* 3. Make the text container full width since the background is abstract 
-        max-width: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(5px); 
-        padding: 20px;
-        border-radius: 15px;
-    }*/
-
-    .hero-tex h2{
-        font-size: 32px;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-        color: #444;
-        margin-bottom: 25px;
-    }
-    html, body {
-        overflow-x: hidden; /* This prevents the site from shaking or sliding sideways */
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* 2. HEADER PADDING */
-    header {
-        padding:5px 10px !important; 
-        display: block;
         justify-content: space-between;
-        align-items: center;
+        gap: 0;
     }
-
-    /* 3. CONTACT SECTION  */
-    .contact-section, .contact-info {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        max-width: 100%; 
-        padding: 0 15px;
-    }
-
-    .contact-item a {
-        font-size: 16px; /* Slightly smaller font if the number is very long */
-        display: block; 
-        white-space: normal; /* Allows the number to wrap if it needs to */
-    }
-
-    /* 4. FOOTER PADDING */
-    footer {
-        padding: 40px 20px !important; 
-        text-align: center;
-    }
-
-    footer .footer-content, footer .footer-bottom {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    /* 5. GENERAL SECTION FIX (Applies to all sections to ensure no "wall" touching) */
-    section {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        box-sizing: border-box; /* Crucial: makes sure padding doesn't add to the width */
+    .hero-text h2{
+        font-size: 40px;
     }
 }
