@@ -49,8 +49,8 @@ header{
 .hero{
     background-image: url("student.png");
     background-attachment: scroll;
-    background-size: auto;
-    background-position: auto;
+    background-size: cover;
+    background-position: left;
     background-repeat: no-repeat;
    
     /*Layout fixes*/
