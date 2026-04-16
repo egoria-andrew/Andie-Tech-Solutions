@@ -47,12 +47,9 @@ header{
     z-index: 10000;
 }
 .hero{
-    background-image: url("student.png");
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-   
+    background-color: linear-gradient(248deg,rgba(2, 0, 36, 1) 0%, rgba(62, 123, 237, 1) 0%, rgba(204, 227, 232, 1) 99%) ;
+    background: url("hero.png") no-repeat scroll center/cover;   
+
     /*Layout fixes*/
     display: flex;
     align-items: center;
@@ -249,7 +246,7 @@ header{
     margin-top: 20px;
 }
 .service-card:hover{
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 .service-img img{
     width: auto;
